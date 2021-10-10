@@ -102,9 +102,9 @@ class ki_includer
         $content = @file_get_contents($scheme_src);
 
         for ( $i = 0; $i < count($keys); ++$i ) {
-			
-			if( !array_key_exists($keys[$i], self::$ki_KeyMaps) )
-				continue;
+            
+            if( !array_key_exists($keys[$i], self::$ki_KeyMaps) )
+                continue;
 			
             $content = str_replace(OPENING_TOKEN . $keys[$i] . CLOSING_TOKEN, self::$ki_KeyMaps[$keys[$i]], $content);
 		}
