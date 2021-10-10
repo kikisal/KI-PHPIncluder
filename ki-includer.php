@@ -107,7 +107,7 @@ class ki_includer
                 continue;
 			
             $content = str_replace(OPENING_TOKEN . $keys[$i] . CLOSING_TOKEN, self::$ki_KeyMaps[$keys[$i]], $content);
-		}
+        }
 
         ob_start();
         echo defined('MINIFY_SCRIPT') && MINIFY_SCRIPT ? self::minifyContent($content) : $content;
